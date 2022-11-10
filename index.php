@@ -1,4 +1,4 @@
-<?php require_once("./classes/registration.class.php") ?>
+<?php require_once("./classes/register.class.php") ?>
 
 <?php
 
@@ -29,20 +29,20 @@ if (isset($_POST['submit'])) {
       <!-- email field-->
       <div class="field">
         <label class="label">Email</label>
-        <input class="input " type="email" placeholder="Enter email">
+        <input class="input " type="email" placeholder="Enter email" required>
       </div>
 
       <!-- password field-->
       <div class="field">
         <label class="label">Password</label>
-        <input class="input " type="password" name="password" placeholder="Enter password">
+        <input class="input " type="password" name="password" placeholder="Enter password" required="true">
       </div>
 
 
       <button class="button is-link" type="submit">Submit</button>
 
-      <p class="sucess"></p>
-      <p class="error"></p>
+      <p class="sucess"><?php echo @$user->success ?></p>
+      <p class="error"><?php echo @$user->error ?></p>
 
 
     </div>
